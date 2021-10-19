@@ -1,0 +1,28 @@
+head {<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
+}
+body {background: yellow;}  
+h1 {
+	color: red;
+	font-style: italic;  
+	background: blue; 
+	margin: audio;
+	width:  30%;
+	text-align: center;
+	font-family: 'Ephesis' , cursive;
+}
+h2 {font-style: italic;}
+p {color: #ff0000;}
+
+#special {
+	color: blue;
+	background: red;
+}
+
+#cyanbk {
+	background-color: cyan;
+	width: 150px;
+	float: left;
+	border: 5px solid green; 
+}

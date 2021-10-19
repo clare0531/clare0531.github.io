@@ -1,0 +1,46 @@
+body {
+	background: skyblue;
+	width: 60%;
+	margin: auto;
+}  
+h1 {
+	color: mediumpurple;
+	font-style: italic;  
+	background: lightcoral; 
+	margin: audio;
+	text-align: center;
+	font-family: 'Ephesis' , cursive;
+}
+h2 {
+	font-style: italic;
+	text-align: center;
+	background: lightseagreen; 
+	border: 2px solid black;
+	width: 60%;
+}
+h3 {
+	background: darkolivegreen;
+	width: 60%;
+
+}
+p {
+	color: #ff0000;
+}
+
+img {
+	float: left;
+	
+
+}
+
+#special {
+	color: blue;
+	background: red;
+}
+
+#cyanbk {
+	background-color: cyan;
+	width: 150px;
+	float: left;
+	border: 5px solid green; 
+}
