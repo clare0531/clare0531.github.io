@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> </title>
+</head>
+    <body>
+    <h1> Welcome to the Harry Potter Quiz! </h1>
+    <p>Welcome Muggle! Which year was the first Harry Potter Book released?</p>
+    <ul>
+    	<li id="ans1">1997</li>
+    	<li id="ans2">1999</li>
+    	<li id="ans3">2003</li>
+    </ul>
+    <p id="ansbox">Correct answer will be shown here</p>
+     
+     <script>
+       var l1=document.querySelector("#ans1");
+       var l2=document.querySelector("#ans2");
+       var l3=document.querySelector("#ans3");
+       var ansbox=document.querySelector("#ansbox");
+       l1.addEventListener("click",changeColor);
+       l2.addEventListener("click", changeColor);
+       l3.addEventListener("click",changeColor);
+
+       function changeColor(){
+        l1.style.backgroundColor="white";
+        l2.style.backgroundColor="white";
+        l3.style.backgroundColor="white";
+        if(this.id=="ans1"){
+            this.style.backgroundColor="green";
+            ansbox.textContent="Correct Answer!";
+
+            }
+        else{
+            this.style.backgroundColor="red";
+            ansbox.textContent="Wrong Answer!";
+
+            }
+       }
+
+       function changeToGreen(){
+            l1.style.backgroundColor="white";
+            l2.style.backgroundColor="white";
+            l3.style.backgroundColor="white";
+            this.style.backgroundColor="green";
+            ansbox.textContent="Correct Answer!";
+       }
+       function changeToRed(){
+            l1.style.backgroundColor="white";
+            l2.style.backgroundColor="white";
+            l3.style.backgroundColor="white";
+
+            this.style.backgroundColor="red";
+            ansbox.textContent="Wrong Answer!";
+       }
+
+
+     </script>
+    </body>
+</html>

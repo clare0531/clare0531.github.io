@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> </title>
+</head>
+    <body>
+    <h1 id="heading1"> The heading </h1>
+    <p id="p1">A paragraph</p>
+    <p id="p2">Another paragraph</p>
+    <p id="p3">Yet another paragraph</p>
+   <input type="button" value="Click me!" id="mybutton">
+     
+     <script>
+        
+         var button=document.querySelector("#mybutton");
+         button.addEventListener("click",doThisWhenClicked);
+
+         var heading1=document.querySelector("#heading1");
+         heading1.addEventListener("mouseover",changetoblue);
+         heading1.addEventListener("mouseout",changetowhite);
+
+         var par1=document.querySelector("#p1");
+         var par2=document.querySelector("#p2");
+
+        par1.addEventListener("click", logIn);
+        par2.addEventListener("click", logIn);
+
+        var par3=document.querySelector("#p3");
+        par3.addEventListener("mouseover",changetoblue);
+        par3.addEventListener("mouseout",changetowhite);
+
+        function changeText(){
+                    alert(this.id);
+               }
+
+        function changetowhite(){
+
+            this.style.backgroundColor="white";
+        }
+        function changetoblue(){
+
+            this.style.backgroundColor="blue";
+        }
+        function doThisWhenClicked(){
+
+            var p3=document.querySelector("#p3");
+            p3.textContent="Inside the event handler, button was clicked!";
+        }
+
+        function logIn(){
+            var userName = prompt("Please enter your username");
+            if(userName=="admin"){
+                 alert("Login successful");
+            }
+            else{
+                 alert("Wrong username");
+            }
+        }
+
+
+
+         
+     </script>
+    </body>
+</html>
+

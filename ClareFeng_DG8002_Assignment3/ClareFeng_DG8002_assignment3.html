@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Taylor Swift Music Store </title>
+</head>
+    <body>
+    <h1> Click "add to cart" to add item </h1> 
+    <p id="t1"> Speak Now </p>
+    <p>Price: $10</p>
+    <input type="button" value="Add Item 1 to Cart" id="pr1">
+
+   <p id="t2"> Fearless </p>
+   <p>Price: $15</p>
+   <input type="button" value="Add Item 2 to Cart" id="pr2">
+
+   <p id="t3"> Red </p>
+   <p>Price: $20</p>
+   <input type="button" value="Add Item 3 to Cart" id="pr3">
+
+    <p> Cart Total:</p>
+     <p id="cart"> 0 </p>
+
+     <p>Enter Payment Amount:</p>
+
+
+     <input type="number" id="payment">
+     <input type="button" value="Confirm Purchase" id="purchase">
+     
+     <script>
+        var price1=document.querySelector("#pr1");
+            price1.addEventListener("click",AddCost);
+        var price2=document.querySelector("#pr2");
+            price2.addEventListener("click",AddCost);
+        var price3=document.querySelector("#pr3");
+            price3.addEventListener("click",AddCost);
+
+        var cart =document.querySelector("#cart");
+        let sum = 0;
+
+
+        function AddCost(){
+            if(this.id=="pr1"){
+                sum+=10;
+                cart.textContent= sum.toString();
+                price1.disabled = true;
+            }
+            else if (this.id=="pr2"){
+                sum+=15;
+                cart.textContent= sum.toString();
+                price2.disabled = true;
+            }
+            else if (this.id=="pr3"){
+                sum +=20;
+                cart.textContent= sum.toString() ;
+                price3.disabled = true;
+            }
+        }
+
+        var title1=document.querySelector("#t1");
+        title1.addEventListener("mouseover",album);
+        title1.addEventListener("mouseout", albumTitleON);
+
+        var title2=document.querySelector("#t2");
+        title2.addEventListener("mouseover",album);
+        title2.addEventListener("mouseout", albumTitleON);
+
+        var title3=document.querySelector("#t3");
+        title3.addEventListener("mouseover",album);
+        title3.addEventListener("mouseout", albumTitleON);
+
+        function album(){
+            if(this.id=="t1"){
+            t1.textContent="Speak Now is the third studio album by American singer-songwriter Taylor Swift, released on October 25, 2010, through Big Machine Records";
+            }
+            else if (this.id=="t2"){
+            t2.textContent="Fearless is the second studio album by American singer-songwriter Taylor Swift. It was released on November 11, 2008, by Big Machine Records. Taylor's Version is also now available";
+            }
+            else if (this.id=="t3"){
+            t3.textContent="Red is the fourth studio album by American singer-songwriter Taylor Swift. It was released on October 22, 2012, by Big Machine Records. Taylors Version is also now available";
+            }
+        }
+
+        function albumTitleON(){
+            t1.textContent="Speak Now";
+            t2.textContent="Fearless";
+            t3.textContent="Red";
+        }
+
+        var pay=document.querySelector("#payment");
+        var pur=document.querySelector("#purchase");
+            pur.addEventListener("click",confirmpurchase);
+
+        function confirmpurchase(){
+            if(pay.value < sum){
+                alert("Payment amount is less than cart total");
+            }
+            else if (pay.value > sum){
+                alert("Payment amount is more than cart total");
+            }
+            else if (pay.value == sum){
+                alert("Payment Complete!");
+            }
+        }
+
+     </script>
+    </body>
+</html>
+
